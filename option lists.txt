@@ -1,0 +1,4 @@
+# Skills
+
+- bold "CET-6" or not.
+- ETL
