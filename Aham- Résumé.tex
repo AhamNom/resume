@@ -1,0 +1,161 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+\usepackage[UTF8]{ctex}
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\usepackage{xeCJK}  
+\usepackage{color}
+\usepackage[citecolor=green
+            ]{hyperref}
+\usepackage{hyperref}
+
+\name{Kaifeng Lin} % Your name
+\address{+(86) 18759188810 \\ \href{mailto:D_5254@hotmail.com}{D\_5254@hotmail.com}} % Your phone number and email
+% \address{22, Male}  % Your address
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+{\textbf{Fujian University of Technology}} \hfill {\em September 2020 - June 2024} \\ 
+B.S. in Computer Science
+
+\end{rSection}
+
+% \begin{rSection}{Campus}
+
+% \begin{rSubsection}{ACM 算法竞赛集训队}{\em 2020.12 - 2022.11}
+    % {}
+    % {}
+    % \item[]
+    % \begin{itemize}
+        % \setlength\itemsep{-0.5em}
+        % \item[-] 学习算法, 大量刷题, 训练思维、训练复杂代码的快速编写，参加 ACM 竞赛。多次获得\textbf{ ACM 区域赛铜奖}。
+        % \item[-] 擅长\textbf{计算几何}、\textbf{字符串}、\textbf{组合计数}算法。
+    % \end{itemize}
+% \end{rSubsection}
+
+% \end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	HONORS / AWARDS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Awards}
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+CCSP (Collegiate Computer Systems \& Programming Contest), Bronze Medal & {\em December 2021} \\
+ICPC Asia-East Continent Regional (Xi'an Site), Bronze Medal & {\em November 2022} \\
+CCPC Mianyang Site, Bronze Medal & {\em November 2022} \\
+ICPC Asia-East Continent Regional (Ji'nan Site), Bronze Medal & {\em November 2022} \\
+\end{tabular}
+\end{rSection}
+%----------------------------------------------------------------------------------------
+%	WORKING EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Work Experience}
+
+\begin{rSubsection}{PuPu Mall}{\em July 2023 - September 2023}
+    {Intern, Data Engineer}
+    {}
+    \item[]
+    \begin{itemize}
+        \setlength\itemsep{-0.5em}
+        \item[-] Participated in ETL. Develop offline and real-time data warehouse.
+        \item[-] Optimized the performance of offline and real-time data warehouses.
+    \end{itemize}
+\end{rSubsection}\textbf{}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS / RESEARCH EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Projects}
+
+Here is a summary of each item:
+
+\begin{rSubsection}
+{\textbf{Judging System and Compiler Optimizations for Algorithm Contests}}{\em 2023.1 - Present} 
+{Deployed open source judging system DOMjudge, modified Clang compiler for optimizations.\\}
+{Can be used in daily team training to save time. My graduation project.}
+\item[]
+\begin{itemize}
+    \setlength\itemsep{-0.5em}
+    \item[-] System optimizations: Encapsulated common algorithms for easy use, lowered learning threshold for new contestants and reduced duplicate work and trivial mistakes for advanced contestants. Implemented a \textbf{mini compiler frontend} for selection, avoiding annoyances like lambda recursion. Extended some operators.  
+    \item[-] Compiler optimizations: Implemented various algorithm optimizations via \textbf{Clang plugins and LLVM passes}. Including: optimize segment trees, remove unnecessary elements in nested vectors/matrices to optimize matrix multiplication; optimize \href{https://oi-wiki.org/math/poly/linear-recurrence/}{linear recurrence} from $O(nk)$ to $O(klogklogn)$; analyze value ranges for static optimizations like table precomputations.
+    \item[-] Planned compiler features: static checking for uninitialized states in DP; reverse contestant code to \LaTeX; reduce copies via new keywords and NRVO.
+\end{itemize}
+\end{rSubsection}
+
+\begin{rSubsection}
+{7z to zip}{\em 2023.3}
+{\textit{A Linux command line tool. It zips 7z files under directories and subdirectories to the target path, while preserving original path structures.} \\}
+{}
+\item[]  
+\begin{itemize}
+    \setlength\itemsep{-0.5em} 
+    \item[-] Wrote a \textbf{thread-safe message queue without locks}, implemented a log class.
+    \item[-] Used C++ 20's concurrency support libraries to write multi-threaded decompression and compression.
+    \item[-] Implemented \textbf{CPU affinity} and \textbf{NUMA affinity}, and optimized memory usage. 
+    \item[-] The program has high configurability, able to read various information from command line parameters and yaml-type configuration files.
+\end{itemize}
+\end{rSubsection}
+
+
+\begin{rSubsection}
+{AhamBT (Backtest Framework)} {\em 2023.10 - 2023.12} 
+{\textit{An event-driven backtest system framework for quantitative trading, supports low-latency strategies based on tick data.} \\}
+{}
+\item[]
+\begin{itemize}
+    \setlength\itemsep{-0.5em}
+    \item[-] The project is written in \textbf{C++ 23}, built with xmake, uses modules feature for clear project structure.
+    \item[-] Based on nanolog achieved \textbf{ultra low latency} logging. Learned the implementation principles of nanolog's truly lock-free (no CAS) and high cache hit rate mechanisms.
+    \item[-] Supports composite strategies from multiple strategies through tree structure, with strong reusability, can flexibly compare different strategy combinations. 
+\end{itemize}
+\end{rSubsection}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Skills}
+\begin{rSubsection}
+{}{}{}{}
+\item[-] Languages: Proficient in C++ syntax and familiar with \textbf{new features from C++11 to C++23}. Familiar with template metaprogramming. Familiar with important modern C++ features like modules, coroutines, ranges, concepts. Understand Python.  
+\item[-] Principles: Understand \textbf{Clang compiler source code}. Understand \textbf{Docker container principles and implementations}. Understand \textbf{memory pool and NUMA related optimizations}. Familiar with basic principles of network protocols like TCP, HTTP, QUIC, WebSocket.
+\item[-] Tools: Familiar with git tools and principles. Familiar with perf performance analysis, lldb debugging. Familiar with build tools like makefile, cmake, xmake. Has Docker container usage experience. Familiar with common script languages like shell, awk.
+\item[-] English level: \textbf{College English Test Band 6}.  
+\end{rSubsection}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	OTHERS SECTION
+%----------------------------------------------------------------------------------------
+
+\end{document}
